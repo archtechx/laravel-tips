@@ -27,8 +27,8 @@
     <meta property="og:description" content="Make your Laravel code cleaner, faster, and safer." />
 
     @if($preview)
-        <meta property="og:image" content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode($preview) }}" />
-        <meta property="twitter:image" content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode($preview) }}" />
+        <meta property="og:image" content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode(html_entity_decode($preview)) }}" />
+        <meta property="twitter:image" content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode(html_entity_decode($preview)) }}" />
     @else
         <meta property="og:image" content="{{ asset('og.png') }}" />
         <meta property="twitter:image" content="{{ asset('og.png') }}" />
