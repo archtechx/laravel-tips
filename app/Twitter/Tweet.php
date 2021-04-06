@@ -12,14 +12,14 @@ class Tweet
     public string $id;
     public string $text;
     public TwitterUser $author;
-    public string|null $threadId = null;
+    public ?string $threadId = null;
     public array $images = [];
 
     public function __construct(
         string $id,
         string $text,
         TwitterUser $author,
-        string|null $threadId = null,
+        ?string $threadId = null,
         array $images = [],
     ) {
         $this->id = $id;

@@ -57,7 +57,7 @@ class Tip extends Model
         return $this->belongsTo(Author::class, 'author_username', 'username');
     }
 
-    public function getTweetUrlAttribute(): string|null
+    public function getTweetUrlAttribute(): string
     {
         return "https://twitter.com/{$this->author_username}/status/{$this->tweet_id}";
     }
