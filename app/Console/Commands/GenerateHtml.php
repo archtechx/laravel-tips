@@ -17,11 +17,11 @@ class GenerateHtml extends Command
 
     protected $description = 'Generate the static HTML.';
 
-    public function __construct(
-        public Router $router,
-        public UrlGenerator $url,
-    ) {
+    public function __construct(Router $router, UrlGenerator $url) {
         parent::__construct();
+
+        $this->router = $router;
+        $this->url = $url;
     }
 
     public function handle()
