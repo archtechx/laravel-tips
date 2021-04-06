@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Twitter\Tweet;
 use App\Twitter\TwitterImage;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -21,7 +22,7 @@ use Illuminate\Support\Str;
  * @property string|null $thread_id
  * @property string[] $images
  * @property-read Author $author
- * @property-read Thread $thread
+ * @property-read Thread|null $thread
  * @property-read \Illuminate\Eloquent\Collection|Image[] $images
  * @property-read string $tweet_url
  */
@@ -89,6 +90,8 @@ class Tip extends Model
             $model->created_at ??= now();
             $model->slug ??= Str::slug($model->title);
         });
+
+        static::addGlobalScope('order', fn (Builder $query) => $query->orderBy('created_at', 'desc'));
     }
 
     public function getKeyName()

@@ -1,4 +1,4 @@
-<x:layout>
+<x:layout :title="$thread->title">
     <main class="mx-auto flex justify-between items-start gap-8">
         <aside class="flex flex-col gap-2 mt-60">
             <h2 class="text-2xl font-medium">

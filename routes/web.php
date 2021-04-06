@@ -21,14 +21,14 @@ Route::middleware('static')->group(function () {
         return view('tips.index', ['tips' => Tip::all()]);
     })->name('tip.index');
 
-    Route::get('/tips/{tip}', function (Tip $tip) {
-        return view('tips.show', compact('tip'));
-    })->name('tip.show');
-
     Route::get('/threads/{thread}', function (Thread $thread) {
         return view('threads.show', [
             'thread' => $thread,
             'tips' => $thread->tips,
         ]);
     })->name('thread.show');
+
+    Route::get('/{tip}', function (Tip $tip) {
+        return view('tips.show', compact('tip'));
+    })->name('tip.show');
 });

@@ -1,62 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Laravel Code Tips
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project is a simple Laravel application that uses:
+- Ryan Chandler's [Orbit](https://github.com/ryangjchandler/orbit) package for storing data in markdown files
+- custom command for generating a static version of the website (this will later be extracted to a separate and more robust package)
+- [Flipp](https://useflipp.io) for beautiful OpenGraph & Twitter Card previews
 
-## About Laravel
+The live version can be found on [laravel-code.tips](https://laravel-code.tips) or if you like emojis, that's [💻🔥⚡️💡.y.at](https://💻🔥⚡️💡.y.at).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Definitely feel free to submit content; it can be a great way to promote your work (not that you can't submit others' tips, we accept all that are good!).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Right now all tips should be on Twitter, but later we'll make it easier to add them standalone as well. That said, it's best to share your work on your Twitter profile before adding it here, since we link back to your Twitter post & profile.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Submitting tips
 
-## Learning Laravel
+Open a PR adding a new file to `content/tips`. The file name should be a unique slug of the tip. The content should look like this:
+```md
+---
+title: 'Use strict comparison'
+tweet_id: '1272826452652810240'
+thread_slug: laravel-clean-code-tactics
+author_username: samuelstancl
+images:
+    - 'https://pbs.twimg.com/media/Ean722QXgAENwmW.jpg'
+created_at: 2021-04-06T16:07:36+00:00
+slug: use-strict-comparison
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+ALWAYS use strict comparison (=== and !==). If needed, cast things go the correct type before comparing. Better than weird == results
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Also consider enabling strict types in your code. This will prevent passing variables of wrong data types to functions
+```
 
-## Laravel Sponsors
+The `slug` matches the file name, the `author_username` is the Twitter handle of the tip author, `tweet_id` is the id of the tweet with the tip, and `images` is an array of images that should be shown between the heading and the content.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Local setup
 
-### Premium Partners
+If you'd like to seed the database with content, create a new Twitter application and set the `TWITTER_TOKEN` variable in `.env` to the Bearer token of the app. That said, you likely won't need this because all the default data is available in this repository already. So you only need to do this if you want to add a lot of tweets in bulk.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+Otherwise, the project doesn't require any database, so you can just `git clone` it and open it in your browser, e.g. using Valet or `artisan serve`.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+To generate the static HTML run `composer generate` and to preview it run `composer serve`.
