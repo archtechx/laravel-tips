@@ -68,7 +68,7 @@ class Tip extends Model
         return array_map(fn (string $url) => new TwitterImage($url), $this->images);
     }
 
-    public static function fromTweet(Tweet $tweet, string $threadSlug = null): static
+    public static function fromTweet(Tweet $tweet, string $threadSlug = null): self
     {
         return new static([
             'title' => (string) Str::of(Str::of($tweet->text)->explode("\n")->first())->rtrim('.')->replaceMatches('/^([^a-zA-Z]*)/', ''), // remove any non-ascii characters from the beginning

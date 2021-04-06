@@ -1,4 +1,4 @@
-<x:layout :title="$tip->title">
+<x:layout :title="$tip->title" :preview="$tip->content">
     <main class="mx-auto flex justify-between items-center gap-8">
         <aside class="flex flex-col gap-2">
             <h2 class="text-2xl font-medium">
