@@ -10,9 +10,12 @@ namespace App\Twitter;
  */
 class TwitterImage
 {
-    public function __construct(
-        public string $url,
-    ) {}
+    public string $url;
+
+    public function __construct(string $url)
+    {
+        $this->url = $url;
+    }
 
     public function __call($size, $args): string
     {

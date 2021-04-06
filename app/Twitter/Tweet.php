@@ -9,13 +9,25 @@ use Illuminate\Support\Facades\Http;
  */
 class Tweet
 {
+    public string $id;
+    public string $text;
+    public TwitterUser $author;
+    public string|null $threadId = null;
+    public array $images = [];
+
     public function __construct(
-        public string $id,
-        public string $text,
-        public TwitterUser $author,
-        public string|null $threadId = null,
-        public array $images = [],
-    ) {}
+        string $id,
+        string $text,
+        TwitterUser $author,
+        string|null $threadId = null,
+        array $images = [],
+    ) {
+        $this->id = $id;
+        $this->text = $text;
+        $this->author = $author;
+        $this->threadId = $threadId;
+        $this->images = $images;
+    }
 
     /** Fetch a tweet. */
     public static function fetch(string $id): Tweet
