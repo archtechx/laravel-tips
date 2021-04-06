@@ -1,0 +1,14 @@
+---
+title: 'When a relationship is already loaded and "cached" on the model instance, you''ll have to refresh it'
+tweet_id: '1308084124947820554'
+thread_slug: 1-rt-1-tip
+author_username: samuelstancl
+images:
+    - 'https://pbs.twimg.com/media/Eic_JawXgAAEbYL.png'
+created_at: 2021-04-06T16:07:40+00:00
+slug: when-a-relationship-is-already-loaded-and-cached-on-the-model-instance-youll-have-to-refresh-it
+---
+
+`$domain-&gt;refresh();` to refresh its attributes
+
+`$tenant-&gt;load('primary_domain');` to update the `primary_domain` relationship on the $tenant instance

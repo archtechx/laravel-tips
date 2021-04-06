@@ -1,0 +1,26 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@hotwired/turbo": "^7.0.0-beta.4",
+        "@tailwindcss/jit": "^0.1.17",
+        "@tailwindcss/typography": "^0.4.0",
+        "alpine-turbo-drive-adapter": "^1.0.2",
+        "alpinejs": "^2.8.2",
+        "axios": "^0.21",
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.2.9",
+        "tailwindcss": "^2.0.4"
+    }
+}
