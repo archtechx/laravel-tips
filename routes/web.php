@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::middleware('static')->group(function () {
     Route::get('/', function () {
         return view('tips.index', ['tips' => Tip::all()]);

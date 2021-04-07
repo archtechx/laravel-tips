@@ -1,23 +1,24 @@
-const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: [
-      './resources/views/**/*.blade.php',
-  ],
-  darkMode: 'class',
-  theme: {
-    extend: {
-        fontFamily: {
-            sans: ['iA Writer Quattro S', ...defaultTheme.fontFamily.sans],
-        }
+    purge: ["./resources/views/**/*.blade.php"],
+
+    mode: "jit",
+
+    darkMode: "class",
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ["iA Writer Quattro S", ...defaultTheme.fontFamily.sans],
+            },
+
+            colors: {
+                ...colors,
+            },
+        },
     },
-    colors,
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-      require('@tailwindcss/typography'),
-  ],
-}
+
+    plugins: [require("@tailwindcss/typography")],
+};

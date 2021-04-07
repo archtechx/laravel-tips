@@ -2,12 +2,8 @@
 
 namespace App\Providers;
 
-use App\MarkdownCompiler;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use League\CommonMark\GithubFlavoredMarkdownConverter;
-use Illuminate\Support\Str;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,18 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Model::unguard();
-
-        Blade::directive('markdown', function (string $expression = '') {
-            if ($expression) {
-                return MarkdownCompiler::compileMarkdownString($expression);
-            }
-
-            return '<?php $__markdownOldBuffer = ob_get_clean(); ob_start(); ?>';
-        });
-
-        Blade::directive('endmarkdown', function () {
-            return '<?php $__markdownString = ob_get_clean(); ob_start(); echo $__markdownOldBuffer; unset($__markdownOldBuffer); echo \App\MarkdownCompiler::compileMarkdownString($__markdownString); unset($__markdownString); ?>';
-        });
 
         view()->share('telegram', 'https://t.me/LaravelCodeTips');
         view()->share('newsletter', 'https://newsletter.laravel-code.tips');

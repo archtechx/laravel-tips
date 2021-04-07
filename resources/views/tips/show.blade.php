@@ -1,71 +1,111 @@
-<x:layout :title="$tip->title" :preview="$tip->title">
-    <main class="mx-auto flex flex-col sm:flex-row justify-between items-center gap-8">
-        <aside class="flex flex-col gap-2">
-            <h2 class="text-2xl font-medium">
-                <a class="block" href="/">
-                    Laravel Code Tips
-                </a>
-            </h2>
-            <div class="flex justify-between">
-                <a class="block" href="{{ $twitter }}" target="_blank">
-                    <span class="link">Twitter</span>
-                </a>
-                <span class="px-2">·</span>
-                <a class="block" href="{{ $newsletter }}" target="_blank">
-                    <span class="link">Newsletter</span>
-                </a>
-                <span class="px-2">·</span>
-                <a class="block" href="{{ $telegram }}" target="_blank">
-                    <span class="link">Telegram</span>
-                </a>
+<x:layout>
+    <div
+        class="fixed inset-0 z-40 items-center justify-between hidden w-full h-screen p-16 pointer-events-none lg:flex">
+        <a class="rounded-full shadow-md pointer-events-auto" href="#">
+            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
             </div>
-            <a class="block" href="/">
-                <span class="link">All tips</span>
-            </a>
-        </aside>
-        <article class="max-w-5xl w-full mt-8 text-xl">
-            <header class="flex justify-center flex-wrap gap-5">
-                <h1 class="text-4xl w-full">🔥 {{ $tip->title }}</h1>
+        </a>
 
-                <div class="flex justify-center w-1/2 gap-1 flex-wrap">
-                    @foreach($tip->images() as $image)
-                        <a href="{{ $image->large() }}" target="_blank">
-                            <img alt="{{ $tip->title }}" src="{{ $image->small() }}">
-                        </a>
-                    @endforeach
+        <a class="rounded-full shadow-md pointer-events-auto" href="#">
+            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <main class="relative flex-1 py-24">
+        <div
+            class="absolute w-full transform skew-y-12 pointer-events-none h-72 md:h-96 -translate-y-1/4 bg-gradient-to-br from-yellow-300 to-pink-400 mix-blend-multiply">
+        </div>
+
+        <div class="w-full max-w-4xl px-4 mx-auto sm:px-6 md:px-8">
+
+            <div class="flex flex-col items-center space-y-6 text-center md:space-y-12">
+                <div class="space-y-6 text-yellow-900">
+                    <h1 class="text-3xl font-bold tracking-tighter md:text-5xl">{{ $tip->title }}</h1>
+
+                    <ul class="inline-grid grid-flow-col gap-4">
+                        <li>
+                            <a class="transition border-b-2 border-pink-100 hover:border-pink-900 focus:outline-none focus:border-pink-900"
+                                href="{{ $twitter }}">Twitter</a>
+                        </li>
+
+                        <li>
+                            <span>&centerdot;</span>
+                        </li>
+
+                        <li>
+                            <a class="transition border-b-2 border-pink-100 hover:border-pink-900 focus:outline-none focus:border-pink-900"
+                                href="{{ $telegram }}">Telegram</a>
+                        </li>
+
+                        <li>
+                            <span>&centerdot;</span>
+                        </li>
+
+                        <li>
+                            <a class="transition border-b-2 border-pink-100 hover:border-pink-900 focus:outline-none focus:border-pink-900"
+                                href="{{ $newsletter }}">Newsletter</a>
+                        </li>
+                    </ul>
                 </div>
-            </header>
 
-            <section role="article" class="mt-8 text-xl prose mx-auto">
-                @markdown{!! $tip->content !!}@endmarkdown
-            </section>
-        </article>
-        <aside>
-            <dl class="grid grid-cols-2 gap-x-5 gap-y-4 items-center">
-                <dt class="text-right">Author</dt>
-                <dd class="text-left">
-                    <a href="{{ $tip->author->profile_url }}" class="flex items-center gap-2" target="_blank">
-                        <img src="{{ $tip->author->avatar }}" class="w-8 rounded-full border-blue-800 border-2">
-                        <span class="text-blue-800">{{ $tip->author->name }}</span>
-                    </a>
-                </dd>
-
-                @if($tip->thread)
-                    <dt class="text-right">Thread</dt>
-                    <dd class="text-left text-blue-800">
-                        <a href="{{ route('thread.show', $tip->thread->slug) }}">
-                            {{ $tip->thread->title }}
-                        </a>
-                    </dd>
+                @if ($tip->images())
+                    @foreach ($tip->images() as $image)
+                        <img class="shadow-xl rounded-xl backdrop-filter backdrop-blur-lg backdrop-saturate-125"
+                            src="{{ $image->small() }}" alt="{{ $tip->title }}">
+                    @endforeach
                 @endif
 
-                <dt class="text-right">Tweet</dt>
-                <dd class="text-left text-blue-800">
-                    <a href="{{ $tip->tweet_url }}" target="_blank">
-                        twitter.com/...
+                @if ($tip->content)
+                    <div class="prose break-all md:prose-xl">
+                        {!! Str::of($tip->content)->markdown() !!}
+                    </div>
+                @endif
+
+                <div class="flex w-full p-6 space-x-6 bg-gray-50 rounded-2xl">
+                    <a href="{{ $tip->author->profile_url }}" target="_blank">
+                        <img class="bg-gray-200 rounded-full w-14 h-14" src="{{ asset($tip->author->avatar) }}"
+                            alt="{{ $tip->author->name }}">
                     </a>
-                </dd>
-            </dl>
-        </aside>
+
+                    <aside class="flex-1 space-y-2 text-left">
+                        <a href="{{ $tip->author->profile_url }}" target="_blank"
+                            class="block text-xl font-bold">{{ $tip->author->name }}</a>
+
+                        <dl class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+                            @if ($tip->thread)
+                                <div>
+                                    <dt class="text-sm text-gray-500">Thread</dt>
+
+                                    <dd>
+                                        <x-link href="{{ route('thread.show', $tip->thread->slug) }}">
+                                            {{ $tip->thread->title }}
+                                        </x-link>
+                                    </dd>
+                                </div>
+                            @endif
+
+                            <div>
+                                <dt class="text-sm text-gray-500">Tweet</dt>
+
+                                <dd>
+                                    <x-link href="{{ $tip->tweet_url }}" target="_blank">
+                                        twitter.com/...
+                                    </x-link>
+                                </dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
+            </div>
+        </div>
     </main>
 </x:layout>
