@@ -34,7 +34,7 @@
                     @endif
 
                     @if ($tip->content)
-                        <div class="prose break-all md:prose-xl">
+                        <div class="prose break-all sm:beak-words md:prose-xl">
                             {!! Str::of($tip->content)->markdown() !!}
                         </div>
                     @endif

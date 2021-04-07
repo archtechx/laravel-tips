@@ -7,6 +7,8 @@
             <a
                 class="rounded-full shadow-md pointer-events-auto"
                 href="{{ route('tip.show', $link, false) }}"
+                x-data
+                @keydown.arrow-left.window="$el.click()"
             >
                 <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
@@ -26,6 +28,8 @@
             <a
                 class="rounded-full shadow-md pointer-events-auto"
                 href="{{ route('tip.show', $link, false) }}"
+                x-data
+                @keydown.arrow-right.window="$el.click()"
                 >
                 <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
