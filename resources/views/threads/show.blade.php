@@ -1,53 +1,31 @@
-<x:layout :title="$thread->title">
-    <main class="mx-auto flex flex-col sm:flex-row justify-between items-start gap-8">
-        <aside class="flex flex-col gap-2 sm:mt-60 sm:mx-0 mx-auto">
-            <h2 class="text-2xl font-medium">
-                <a class="block" href="/">
-                    Laravel Code Tips
-                </a>
-            </h2>
-            <div class="flex justify-between">
-                <a class="block" href="{{ $twitter }}" target="_blank">
-                    <span class="link">Twitter</span>
-                </a>
-                <span class="px-2">·</span>
-                <a class="block" href="{{ $newsletter }}" target="_blank">
-                    <span class="link">Newsletter</span>
-                </a>
-                <span class="px-2">·</span>
-                <a class="block" href="{{ $telegram }}" target="_blank">
-                    <span class="link">Telegram</span>
-                </a>
+<x:layout>
+    <header class="relative py-24">
+        <div
+            class="absolute w-full transform skew-y-12 pointer-events-none h-72 md:h-96 -translate-y-1/4 bg-gradient-to-br from-yellow-300 to-pink-400 mix-blend-multiply">
+        </div>
+
+        <x:container>
+            <div class="flex flex-col items-center space-y-6 text-center text-yellow-900">
+                <h1 class="text-4xl font-bold tracking-tighter md:text-5xl lg:text-8xl">
+                    🔥 {{ $thread->title }}
+                </h1>
+
+                <div class="prose md:prose-xl">
+                    {!! Str::markdown($thread->content) !!}
+                </div>
+
+                <x:socials />
             </div>
-            <a class="block" href="/">
-                <span class="link">All tips</span>
-            </a>
-        </aside>
-        <article class="max-w-5xl w-full mt-8">
-            <header class="flex justify-center flex-wrap gap-5">
-                <h1 class="text-4xl w-full">🔥 {{ $thread->title }}</h1>
-                <div class="prose text-xl">@markdown{!! $thread->content !!}@endmarkdown</div>
+        </x:container>
+    </header>
 
-                <x:feed :tips="$tips" />
-            </header>
-        </article>
-        <aside class="sm:mt-60">
-            <dl class="grid grid-cols-2 gap-x-5 gap-y-4 items-center">
-                <dt class="text-right">Author</dt>
-                <dd class="text-left">
-                    <a href="{{ $thread->author->profile_url }}" class="flex items-center gap-2" target="_blank">
-                        <img src="{{ $thread->author->avatar }}" class="w-8 rounded-full border-blue-800 border-2">
-                        <span class="text-blue-800">{{ $thread->author->name }}</span>
-                    </a>
-                </dd>
+    <main class="flex-1 divide-y" role="feed">
+        <x:feed :tips="$tips" />
 
-                <dt class="text-right">Tweet</dt>
-                <dd class="text-left text-blue-800">
-                    <a href="{{ $thread->tweet_url }}" target="_blank">
-                        twitter.com/...
-                    </a>
-                </dd>
-            </dl>
-        </aside>
+        <section class="py-12 bg-white md:py-24">
+            <x:container>
+                <x:author-card :tip="$thread" />
+            </x:container>
+        </section>
     </main>
 </x:layout>

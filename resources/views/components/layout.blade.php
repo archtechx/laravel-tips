@@ -4,13 +4,12 @@
 ])
 
 @php
-    $title = $title
-        ? $title . ' | Laravel Code Tips'
-        : 'Laravel Code Tips';
+$title = $title ? $title . ' | Laravel Code Tips' : 'Laravel Code Tips';
 @endphp
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,9 +25,11 @@
     <meta property="og:title" content="{{ $title }}" />
     <meta property="og:description" content="Make your Laravel code cleaner, faster, and safer." />
 
-    @if($preview)
-        <meta property="og:image" content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode(html_entity_decode($preview)) }}" />
-        <meta property="twitter:image" content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode(html_entity_decode($preview)) }}" />
+    @if ($preview)
+        <meta property="og:image"
+            content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode(html_entity_decode($preview)) }}" />
+        <meta property="twitter:image"
+            content="https://i.useflipp.com/g6demrp3y3rz.png?content={{ urlencode(html_entity_decode($preview)) }}" />
     @else
         <meta property="og:image" content="{{ asset('og.png') }}" />
         <meta property="twitter:image" content="{{ asset('og.png') }}" />
@@ -45,14 +46,28 @@
 
     <meta name="theme-color" content="#fa7c4c">
 </head>
-<body class="antialiased bg-white">
-    <div class="w-full p-3 text-center min-h-screen flex justify-between flex-col">
-        {{ $slot }}
 
-        <footer class="space-y-2 text-gray-700 text-sm pt-8">
-            <p>Found an error? Contact us at <a href="mailto:hello@laravel-code.tips" class="link">support@laravel-code.tips</a>.</p>
-            <p>Want to share a tip? Submit it <a href="https://github.com/stancl/laravel-tips" target="_blank" class="link">here</a>.</p>
-        </footer>
-    </div>
+<body class="flex flex-col min-h-screen font-sans antialiased text-gray-800">
+    {{ $slot }}
+
+    <footer class="py-12 border-t">
+        <ul class="px-4 space-y-4 text-center text-gray-500">
+            <li>
+                Found an error? Contact us at
+                <x-link href="mailto:hello@laravel-code.tips">support@laravel-code.tips</x-link>
+            </li>
+
+            <li>
+                Want to share a tip? Submit it
+                <x-link target="_blank" href="https://github.com/stancl/laravel-tips">here</x-link>
+            </li>
+
+            <li>
+                Designed with <span class="text-red-500">❤️</span> by
+                <x-link target="_blank" href="http://twitter.com/larsKlopstra/">@larsklopstra</x-link>
+            </li>
+        </ul>
+    </footer>
 </body>
+
 </html>

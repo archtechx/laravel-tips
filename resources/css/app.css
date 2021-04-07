@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.link {
-    @apply border-b-2 border-gray-100 hover:border-gray-400 transition;
+@layer base {
+    .prose a {
+        @apply relative;
+    }
 }
