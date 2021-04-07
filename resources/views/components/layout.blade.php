@@ -4,7 +4,9 @@
 ])
 
 @php
-$title = $title ? $title . ' | Laravel Code Tips' : 'Laravel Code Tips';
+$title = $title
+    ? $title . ' | Laravel Code Tips'
+    : 'Laravel Code Tips';
 @endphp
 
 <!DOCTYPE html>
