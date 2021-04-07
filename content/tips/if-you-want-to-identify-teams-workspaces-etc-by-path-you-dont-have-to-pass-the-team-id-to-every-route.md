@@ -6,7 +6,7 @@ author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidKFFnX0AEEjwr.png'
     - 'https://pbs.twimg.com/media/EidKYlkWoAAWkLD.png'
-created_at: 2021-04-06T16:07:43+00:00
+created_at: 2020-09-21T17:30:36+00:00
 slug: if-you-want-to-identify-teams-workspaces-etc-by-path-you-dont-have-to-pass-the-team-id-to-every-route
 ---
 

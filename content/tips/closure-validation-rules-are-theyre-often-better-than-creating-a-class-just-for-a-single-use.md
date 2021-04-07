@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidAtSYXgAc-6tH.png'
-created_at: 2021-04-06T16:07:41+00:00
+created_at: 2020-09-21T16:48:18+00:00
 slug: closure-validation-rules-are-theyre-often-better-than-creating-a-class-just-for-a-single-use
 ---
 

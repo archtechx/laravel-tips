@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Eic9xP2XsAoo8ay.png'
-created_at: 2021-04-06T16:07:40+00:00
+created_at: 2020-09-21T16:37:19+00:00
 slug: theres-great-value-in-understanding-how-object-state-of-models-works-this-is-mostly-relevant-in-feature-tests-because-they-touch-many-parts-of-your-codebase-in-one-phplaravel-app-state
 ---
 

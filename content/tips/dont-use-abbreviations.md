@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean4TBBXgAAMab3.png'
-created_at: 2021-04-06T16:07:30+00:00
+created_at: 2020-06-16T09:24:59+00:00
 slug: dont-use-abbreviations
 ---
 

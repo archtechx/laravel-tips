@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: reinink
 images:
     - 'https://pbs.twimg.com/media/ERyNRSIX0AEjjWo.jpg'
-created_at: 2021-04-06T16:07:49+00:00
+created_at: 2020-02-27T13:12:31+00:00
 slug: yesterday-in-my-at-laracononline-talk-i-explained-how-to-use-the-query-builder-when-method-to-handle-complex-sorting
 ---
 

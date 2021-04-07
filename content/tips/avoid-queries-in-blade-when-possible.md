@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean7jvPWkAAp2_6.jpg'
-created_at: 2021-04-06T16:07:36+00:00
+created_at: 2020-06-16T09:40:48+00:00
 slug: avoid-queries-in-blade-when-possible
 ---
 

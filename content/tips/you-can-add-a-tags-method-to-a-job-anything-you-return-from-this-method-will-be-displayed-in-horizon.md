@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidtAYaXkAEjAl-.jpg'
-created_at: 2021-04-06T16:07:47+00:00
+created_at: 2020-09-21T20:00:50+00:00
 slug: you-can-add-a-tags-method-to-a-job-anything-you-return-from-this-method-will-be-displayed-in-horizon
 ---
 

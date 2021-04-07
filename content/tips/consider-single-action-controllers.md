@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean6Sn9XkAA-WKS.png'
-created_at: 2021-04-06T16:07:34+00:00
+created_at: 2020-06-16T09:40:45+00:00
 slug: consider-single-action-controllers
 ---
 

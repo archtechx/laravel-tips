@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EinfW11XgAE0y7W.jpg'
-created_at: 2021-04-06T16:07:49+00:00
+created_at: 2020-09-23T17:40:43+00:00
 slug: when-im-converting-data-into-a-different-structure-one-thing-i-like-to-do-is-annotate-how-the-structure-looks-at-each-point-of-the-process
 ---
 

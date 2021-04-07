@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EanzmPwXYAAoH2A.jpg'
-created_at: 2021-04-06T16:07:23+00:00
+created_at: 2020-06-16T09:24:52+00:00
 slug: try-to-avoid-unnecessary-nesting-by-returning-a-value-early
 ---
 

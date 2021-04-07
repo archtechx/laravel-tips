@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidyDmfWsAI14-C.png'
-created_at: 2021-04-06T16:07:48+00:00
+created_at: 2020-09-21T20:24:49+00:00
 slug: you-can-explicitly-bind-objects-to-routes-you-dont-have-to-use-route-model-binding-only-custom-objects-work-perfectly-well-too
 ---
 

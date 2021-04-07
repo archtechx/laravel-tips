@@ -81,6 +81,7 @@ class Tip extends Model
                 'avatar' => $tweet->author->profile_image_url,
             ])->username,
             'images' => array_map(fn (TwitterImage $image) => $image->url, $tweet->images),
+            'created_at' => $tweet->created_at,
         ]);
     }
 

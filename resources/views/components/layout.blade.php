@@ -53,18 +53,13 @@ $title = $title ? $title . ' | Laravel Code Tips' : 'Laravel Code Tips';
     <footer class="py-12 border-t">
         <ul class="px-4 space-y-4 text-center text-gray-500">
             <li>
-                Found an error? Contact us at
-                <x-link href="mailto:hello@laravel-code.tips">support@laravel-code.tips</x-link>
-            </li>
-
-            <li>
                 Want to share a tip? Submit it
-                <x-link target="_blank" href="https://github.com/stancl/laravel-tips">here</x-link>
+                <x-link href="https://github.com/stancl/laravel-tips">here</x-link>
             </li>
 
             <li>
                 Designed with <span class="text-red-500">❤️</span> by
-                <x-link target="_blank" href="http://twitter.com/larsKlopstra/">@larsklopstra</x-link>
+                <x-link target="_blank" href="http://twitter.com/LarsKlopstra">Lars Klopstra</x-link>
             </li>
         </ul>
     </footer>

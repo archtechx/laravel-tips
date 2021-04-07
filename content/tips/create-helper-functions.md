@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean1ow4WoAAFjoT.jpg'
-created_at: 2021-04-06T16:07:27+00:00
+created_at: 2020-06-16T09:24:56+00:00
 slug: create-helper-functions
 ---
 

@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean7QGBXYAEt_l2.jpg'
-created_at: 2021-04-06T16:07:35+00:00
+created_at: 2020-06-16T09:40:47+00:00
 slug: consider-using-helpers-instead-of-facades-they-can-clean-things-up
 ---
 

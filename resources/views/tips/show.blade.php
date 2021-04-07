@@ -1,23 +1,40 @@
 <x:layout>
     <div
         class="fixed inset-0 z-40 items-center justify-between hidden w-full h-screen p-16 pointer-events-none lg:flex">
-        <a class="rounded-full shadow-md pointer-events-auto" href="#">
-            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </div>
-        </a>
 
-        <a class="rounded-full shadow-md pointer-events-auto" href="#">
-            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+        {{-- Left button = newer --}}
+        @if($link = $tip->newQuery()->orderBy('created_at', 'asc')->firstWhere('created_at', '>', $tip->created_at))
+            <a
+                class="rounded-full shadow-md pointer-events-auto"
+                href="{{ route('tip.show', $link, false) }}"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </div>
+            </a>
+        @else
+            <div>
+                {{-- Placeholder for positioning of the right button --}}
             </div>
-        </a>
+        @endif
+
+        {{-- Right button = older --}}
+        @if($link = $tip->newQuery()->orderBy('created_at', 'desc')->firstWhere('created_at', '<', $tip->created_at))
+            <a
+                class="rounded-full shadow-md pointer-events-auto"
+                href="{{ route('tip.show', $link, false) }}"
+                >
+                <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+        @endif
     </div>
 
     <main class="relative flex-1 py-24">
@@ -41,7 +58,7 @@
                 @endif
 
                 @if ($tip->content)
-                    <div class="prose break-all md:prose-xl">
+                    <div class="prose break-words md:prose-xl">
                         {!! Str::markdown($tip->content) !!}
                     </div>
                 @endif

@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Eidmle3WoAI72Yk.png'
-created_at: 2021-04-06T16:07:46+00:00
+created_at: 2020-09-21T19:32:43+00:00
 slug: you-can-return-false-from-a-ing-eloquent-event-listener-creating-updating-saving-deleting-to-cancel-the-action
 ---
 

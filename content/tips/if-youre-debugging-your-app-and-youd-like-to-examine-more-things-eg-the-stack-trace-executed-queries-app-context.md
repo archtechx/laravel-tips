@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidXEVXXgAofRdr.jpg'
-created_at: 2021-04-06T16:07:44+00:00
+created_at: 2020-09-21T18:24:57+00:00
 slug: if-youre-debugging-your-app-and-youd-like-to-examine-more-things-eg-the-stack-trace-executed-queries-app-context
 ---
 

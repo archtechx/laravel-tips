@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidI3vCXgAIOCvY.png'
-created_at: 2021-04-06T16:07:43+00:00
+created_at: 2020-09-21T17:24:29+00:00
 slug: laravel-telescope-is-great-for-so-many-things
 ---
 

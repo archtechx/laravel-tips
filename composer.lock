@@ -895,16 +895,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.35.1",
+            "version": "v8.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d118c0df39e7524131176aaf76493eae63a8a602"
+                "reference": "0debd8ad6b5aa1f61ccc73910adf049af4ca0444"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d118c0df39e7524131176aaf76493eae63a8a602",
-                "reference": "d118c0df39e7524131176aaf76493eae63a8a602",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0debd8ad6b5aa1f61ccc73910adf049af4ca0444",
+                "reference": "0debd8ad6b5aa1f61ccc73910adf049af4ca0444",
                 "shasum": ""
             },
             "require": {
@@ -1059,7 +1059,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-03-30T21:34:17+00:00"
+            "time": "2021-04-07T12:37:22+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2440,16 +2440,16 @@
         },
         {
             "name": "ryangjchandler/orbit",
-            "version": "v0.7.2",
+            "version": "v0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ryangjchandler/orbit.git",
-                "reference": "b01f1d8c28586410ce3bf3c3ada9c131e03b9ff9"
+                "reference": "2636eb680e96a3cd4e2a911e44df3850f4e90518"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ryangjchandler/orbit/zipball/b01f1d8c28586410ce3bf3c3ada9c131e03b9ff9",
-                "reference": "b01f1d8c28586410ce3bf3c3ada9c131e03b9ff9",
+                "url": "https://api.github.com/repos/ryangjchandler/orbit/zipball/2636eb680e96a3cd4e2a911e44df3850f4e90518",
+                "reference": "2636eb680e96a3cd4e2a911e44df3850f4e90518",
                 "shasum": ""
             },
             "require": {
@@ -2496,7 +2496,7 @@
             "description": "A flat-file database driver for Eloquent.",
             "support": {
                 "issues": "https://github.com/ryangjchandler/orbit/issues",
-                "source": "https://github.com/ryangjchandler/orbit/tree/v0.7.2"
+                "source": "https://github.com/ryangjchandler/orbit/tree/v0.7.4"
             },
             "funding": [
                 {
@@ -2504,7 +2504,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-29T13:10:29+00:00"
+            "time": "2021-04-04T21:29:16+00:00"
         },
         {
             "name": "spatie/yaml-front-matter",
@@ -4883,16 +4883,16 @@
         },
         {
             "name": "symplify/git-wrapper",
-            "version": "v9.2.12",
+            "version": "v9.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/git-wrapper.git",
-                "reference": "ab372196b2925900d94f06bd97c73deb0654bc94"
+                "reference": "790b91b137bb26eaebe8f56a6961883439874f71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/git-wrapper/zipball/ab372196b2925900d94f06bd97c73deb0654bc94",
-                "reference": "ab372196b2925900d94f06bd97c73deb0654bc94",
+                "url": "https://api.github.com/repos/symplify/git-wrapper/zipball/790b91b137bb26eaebe8f56a6961883439874f71",
+                "reference": "790b91b137bb26eaebe8f56a6961883439874f71",
                 "shasum": ""
             },
             "require": {
@@ -4905,7 +4905,7 @@
                 "ondram/ci-detector": "^3.5",
                 "phpunit/phpunit": "^9.5",
                 "psr/log": "^1.1",
-                "symplify/smart-file-system": "^9.2.12"
+                "symplify/smart-file-system": "^9.2.14"
             },
             "type": "library",
             "autoload": {
@@ -4924,7 +4924,7 @@
                 "git wrapper"
             ],
             "support": {
-                "source": "https://github.com/symplify/git-wrapper/tree/v9.2.12"
+                "source": "https://github.com/symplify/git-wrapper/tree/v9.2.14"
             },
             "funding": [
                 {
@@ -4936,7 +4936,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-19T11:24:34+00:00"
+            "time": "2021-03-22T13:11:48+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5658,16 +5658,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.4.10",
+            "version": "v1.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "4f0b2bac128ee60a11d9758651f103f78157474a"
+                "reference": "e46a3228da4e95a411a981ac807bd119ab2485fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/4f0b2bac128ee60a11d9758651f103f78157474a",
-                "reference": "4f0b2bac128ee60a11d9758651f103f78157474a",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/e46a3228da4e95a411a981ac807bd119ab2485fa",
+                "reference": "e46a3228da4e95a411a981ac807bd119ab2485fa",
                 "shasum": ""
             },
             "require": {
@@ -5714,7 +5714,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-03-30T21:26:44+00:00"
+            "time": "2021-04-06T14:00:39+00:00"
         },
         {
             "name": "mockery/mockery",

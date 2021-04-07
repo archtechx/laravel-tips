@@ -2,6 +2,7 @@
 
 namespace App\Twitter;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Http;
 
 /**
@@ -14,18 +15,21 @@ class Tweet
     public TwitterUser $author;
     public ?string $threadId = null;
     public array $images = [];
+    public Carbon $created_at;
 
     public function __construct(
         string $id,
         string $text,
         TwitterUser $author,
         ?string $threadId = null,
+        Carbon $created_at,
         array $images = [],
     ) {
         $this->id = $id;
         $this->text = $text;
         $this->author = $author;
         $this->threadId = $threadId;
+        $this->created_at = $created_at;
         $this->images = $images;
     }
 
@@ -36,7 +40,7 @@ class Tweet
             ->withToken(config('services.twitter.token'))
             ->get('https://api.twitter.com/2/tweets/' . $id, [
                 'media.fields' => 'url',
-                'tweet.fields' => 'conversation_id,entities',
+                'tweet.fields' => 'conversation_id,entities,created_at',
                 'user.fields' => 'profile_image_url',
                 'expansions' => 'attachments.media_keys,author_id',
             ]);
@@ -66,6 +70,7 @@ class Tweet
                 $author['profile_image_url'],
             ),
             $response->json('data.conversation_id'),
+            Carbon::make($response->json('data.created_at')),
             array_map(fn (string $url) => new TwitterImage($url), $response->json('includes.media.*.url', [])),
         );
     }

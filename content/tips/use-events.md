@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean07-jXkAErgaL.jpg'
-created_at: 2021-04-06T16:07:26+00:00
+created_at: 2020-06-16T09:24:55+00:00
 slug: use-events
 ---
 

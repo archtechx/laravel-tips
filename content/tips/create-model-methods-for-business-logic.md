@@ -5,7 +5,7 @@ thread_slug: laravel-clean-code-tactics
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/Ean0WGiWAAAg4cu.jpg'
-created_at: 2021-04-06T16:07:25+00:00
+created_at: 2020-06-16T09:24:54+00:00
 slug: create-model-methods-for-business-logic
 ---
 

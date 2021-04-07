@@ -5,7 +5,7 @@ thread_slug: 1-rt-1-tip
 author_username: samuelstancl
 images:
     - 'https://pbs.twimg.com/media/EidBy75XsA4CZGx.jpg'
-created_at: 2021-04-06T16:07:41+00:00
+created_at: 2020-09-21T16:52:14+00:00
 slug: relevant-for-people-building-packages
 ---
 
