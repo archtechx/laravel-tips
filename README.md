@@ -1,15 +1,16 @@
 # Laravel Code Tips
 
 This project is a simple Laravel application that uses:
-- Ryan Chandler's [Orbit](https://github.com/ryangjchandler/orbit) package for storing data in markdown files
-- custom command for generating a static version of the website (this will later be extracted to a separate and more robust package)
-- [Flipp](https://useflipp.io) for beautiful OpenGraph & Twitter Card previews
+- Ryan Chandler's [Orbit](https://github.com/ryangjchandler/orbit) package for storing data in markdown files,
+- custom command for generating a static version of the website (this will later be extracted to a separate and more robust package),
+- [Flipp](https://useflipp.io) for beautiful OpenGraph & Twitter Card previews,
+- [Lars Klopstra](https://twitter.com/larsklopstra)'s amazing design skills. Thanks a ton for the design ❤️
 
 The live version can be found on [laravel-code.tips](https://laravel-code.tips) or if you like emojis, that's [💻🔥⚡️💡.y.at](https://💻🔥⚡️💡.y.at).
 
 Definitely feel free to submit content; it can be a great way to promote your work (not that you can't submit others' tips, we accept all that are good!).
 
-Right now all tips should be on Twitter, but later we'll make it easier to add them standalone as well. That said, it's best to share your work on your Twitter profile before adding it here, since we link back to your Twitter post & profile.
+Right now all tips should be on Twitter, but later we'll make it easier to add them standalone as well. That said, it's best to share your work on your Twitter profile before adding it here, since we link back to your Twitter post & profile, which will help you grow an audience.
 
 ## Submitting tips
 
