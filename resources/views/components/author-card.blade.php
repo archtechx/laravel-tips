@@ -16,7 +16,7 @@
                     <dt class="text-sm text-gray-500">Thread</dt>
 
                     <dd>
-                        <x-link href="{{ route('thread.show', $tip->thread->slug) }}">
+                        <x-link href="{{ route('thread.show', $tip->thread->slug, false) }}">
                             {{ $tip->thread->title }}
                         </x-link>
                     </dd>

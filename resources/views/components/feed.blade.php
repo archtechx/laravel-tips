@@ -8,7 +8,7 @@
                     class="flex flex-col items-center space-y-6 md:space-y-12 text-center group transition transform active:scale-[0.99] duration-75 relative"
                     role="article">
                     <a class="absolute inset-0 w-full h-full" title="{{ $tip->title }}"
-                        href="{{ route('tip.show', $tip) }}">
+                        href="{{ route('tip.show', $tip, false) }}">
                         <span class="sr-only">{{ $tip->title }}</span>
                     </a>
 
