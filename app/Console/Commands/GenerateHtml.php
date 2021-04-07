@@ -17,6 +17,9 @@ class GenerateHtml extends Command
 
     protected $description = 'Generate the static HTML.';
 
+    public Router $router;
+    public UrlGenerator $url;
+
     public function __construct(Router $router, UrlGenerator $url) {
         parent::__construct();
 
@@ -29,6 +32,10 @@ class GenerateHtml extends Command
         $outdir = realpath($this->argument('outdir'));
 
         $this->url->forceRootUrl($this->argument('rootUrl'));
+
+        if (Str::startsWith($this->argument('rootUrl'), 'https')) {
+            $this->url->forceScheme('https');
+        }
 
         File::copyDirectory(public_path(), $outdir);
 
