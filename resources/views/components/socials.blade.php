@@ -24,9 +24,11 @@
         </li>
     </ul>
 
-    <div class="mt-3">
-        <a href="/" class="transition border-b-2 border-pink-100 hover:border-pink-900 focus:outline-none focus:border-pink-900">
-            All tips
-        </a>
-    </div>
+    @if(! request()->routeIs('tip.index'))
+        <div class="mt-3">
+            <a href="/" class="transition border-b-2 border-pink-100 hover:border-pink-900 focus:outline-none focus:border-pink-900">
+                All tips
+            </a>
+        </div>
+    @endif
 </div>
