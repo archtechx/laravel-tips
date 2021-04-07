@@ -1,4 +1,4 @@
-<x:layout>
+<x:layout :title="$tip->title" :preview="$tip->title">
     <div
         x-data
         @keydown.escape.window="Turbo.visit('{{ route('tip.index') }}')"

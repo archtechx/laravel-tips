@@ -1,4 +1,4 @@
-<x:layout>
+<x:layout :title="$thread->title">
     <header class="relative py-24">
         <div
             class="absolute w-full transform skew-y-12 pointer-events-none h-72 md:h-96 -translate-y-1/4 bg-gradient-to-br from-yellow-300 to-pink-400 mix-blend-multiply">
