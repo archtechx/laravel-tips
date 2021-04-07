@@ -7,3 +7,15 @@
         @apply relative;
     }
 }
+
+.break-smart {
+    @apply break-all;
+}
+
+@screen sm {
+    .break-smart {
+        word-break: normal !important;
+
+        @apply break-words;
+    }
+}
