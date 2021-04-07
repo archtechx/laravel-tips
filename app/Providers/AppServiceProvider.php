@@ -42,5 +42,8 @@ class AppServiceProvider extends ServiceProvider
             return '<?php $__markdownString = ob_get_clean(); ob_start(); echo $__markdownOldBuffer; unset($__markdownOldBuffer); echo \App\MarkdownCompiler::compileMarkdownString($__markdownString); unset($__markdownString); ?>';
         });
 
+        view()->share('telegram', 'https://t.me/LaravelCodeTips');
+        view()->share('newsletter', 'https://newsletter.laravel-code.tips');
+        view()->share('twitter', 'https://twitter.com/LaravelCodeTips');
     }
 }

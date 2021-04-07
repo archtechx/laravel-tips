@@ -3,15 +3,15 @@
         <h1 class="text-5xl w-full">Laravel Code Tips</h1>
         <h2 class="mt-6 text-2xl text-gray-700">Make your Laravel code cleaner, faster, and safer.</h2>
         <div class="mt-6 text-gray-800 text-lg">
-            <a class="inline" href="https://twitter.com/LaravelCodeTips" target="_blank">
+            <a class="inline" href="{{ $twitter }}" target="_blank">
                 <span class="link">Twitter</span>
             </a>
             <span class="px-1">·</span>
-            <a class="inline" href="https://newsletter.laravel-code.tips" target="_blank">
+            <a class="inline" href="{{ $newsletter }}" target="_blank">
                 <span class="link">Newsletter</span>
             </a>
             <span class="px-1">·</span>
-            <a class="inline" href="https://t.me/laraveltips" target="_blank">
+            <a class="inline" href="{{ $telegram }}" target="_blank">
                 <span class="link">Telegram</span>
             </a>
         </div>

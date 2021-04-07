@@ -7,15 +7,15 @@
                 </a>
             </h2>
             <div class="flex justify-between">
-                <a class="block" href="https://twitter.com/LaravelCodeTips" target="_blank">
+                <a class="block" href="{{ $twitter }}" target="_blank">
                     <span class="link">Twitter</span>
                 </a>
                 <span class="px-2">·</span>
-                <a class="block" href="https://newsletter.laravel-code.tips" target="_blank">
+                <a class="block" href="{{ $newsletter }}" target="_blank">
                     <span class="link">Newsletter</span>
                 </a>
                 <span class="px-2">·</span>
-                <a class="block" href="https://t.me/laraveltips" target="_blank">
+                <a class="block" href="{{ $telegram }}" target="_blank">
                     <span class="link">Telegram</span>
                 </a>
             </div>
