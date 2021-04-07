@@ -1,6 +1,9 @@
 <x:layout>
     <div
-        class="fixed inset-0 z-40 items-center justify-between hidden w-full h-screen p-16 pointer-events-none lg:flex">
+        x-data
+        @keydown.escape.window="Turbo.visit('{{ route('tip.index') }}')"
+        class="fixed inset-0 z-40 items-center justify-between hidden w-full h-screen p-16 pointer-events-none lg:flex"
+    >
 
         {{-- Left button = newer --}}
         @if($link = $tip->newQuery()->orderBy('created_at', 'asc')->firstWhere('created_at', '>', $tip->created_at))
