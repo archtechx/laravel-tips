@@ -49,7 +49,7 @@
     <div class="w-full p-3 text-center min-h-screen flex justify-between flex-col">
         {{ $slot }}
 
-        <footer class="space-y-2 text-gray-700 text-sm">
+        <footer class="space-y-2 text-gray-700 text-sm pt-8">
             <p>Found an error? Contact us at <a href="mailto:hello@laravel-code.tips" class="link">support@laravel-code.tips</a>.</p>
             <p>Want to share a tip? Submit it <a href="https://github.com/stancl/laravel-tips" target="_blank" class="link">here</a>.</p>
         </footer>

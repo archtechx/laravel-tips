@@ -16,7 +16,7 @@
             </a>
         </div>
     </header>
-    <main class="mx-auto flex justify-between items-center gap-8 w-1/2">
+    <main class="mx-auto flex justify-between items-center gap-8 sm:w-1/2">
         <x:feed :tips="$tips" />
     </main>
 </x:layout>

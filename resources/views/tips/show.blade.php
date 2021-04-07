@@ -1,5 +1,5 @@
 <x:layout :title="$tip->title" :preview="$tip->title">
-    <main class="mx-auto flex justify-between items-center gap-8">
+    <main class="mx-auto flex flex-col sm:flex-row justify-between items-center gap-8">
         <aside class="flex flex-col gap-2">
             <h2 class="text-2xl font-medium">
                 <a class="block" href="/">

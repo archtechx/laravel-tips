@@ -1,6 +1,6 @@
 <x:layout :title="$thread->title">
-    <main class="mx-auto flex justify-between items-start gap-8">
-        <aside class="flex flex-col gap-2 mt-60">
+    <main class="mx-auto flex flex-col sm:flex-row justify-between items-start gap-8">
+        <aside class="flex flex-col gap-2 sm:mt-60 sm:mx-0 mx-auto">
             <h2 class="text-2xl font-medium">
                 <a class="block" href="/">
                     Laravel Code Tips
@@ -31,7 +31,7 @@
                 <x:feed :tips="$tips" />
             </header>
         </article>
-        <aside class="mt-60">
+        <aside class="sm:mt-60">
             <dl class="grid grid-cols-2 gap-x-5 gap-y-4 items-center">
                 <dt class="text-right">Author</dt>
                 <dd class="text-left">
