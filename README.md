@@ -3,7 +3,7 @@
 This project is a simple Laravel application that uses:
 - Ryan Chandler's [Orbit](https://github.com/ryangjchandler/orbit) package for storing data in markdown files,
 - custom command for generating a static version of the website (this will later be extracted to a separate and more robust package),
-- [Flipp](https://useflipp.io) for beautiful OpenGraph & Twitter Card previews,
+- [Flipp](https://useflipp.com) for beautiful OpenGraph & Twitter Card previews,
 - [Lars Klopstra](https://twitter.com/larsklopstra)'s amazing design skills. Thanks a ton for the design ❤️
 
 The live version can be found on [laravel-code.tips](https://laravel-code.tips) or if you like emojis, that's [💻🔥⚡️💡.y.at](https://💻🔥⚡️💡.y.at).
