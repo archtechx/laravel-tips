@@ -22,7 +22,7 @@ Route::middleware('static')->group(function () {
 
     Route::get('/threads/{thread}/{link}', function (Thread $thread, string $link) {
         return redirect($thread->links[$link]['url']);
-    })->name('thread.show');
+    })->name('thread.link');
 
     Route::get('/threads/{thread}', function (Thread $thread) {
         return view('threads.show', [

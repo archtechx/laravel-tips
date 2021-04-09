@@ -42,9 +42,9 @@
                     <dt class="text-sm text-gray-500">Links</dt>
 
                     <dd>
-                        @foreach($links as $link)
-                        <x-link href="{{ $link['url'] }}" target="_blank">
-                            {{ ucfirst($link['name']) }}
+                        @foreach($links as $text => $url)
+                        <x-link href="{{ $url }}" target="_blank">
+                            {{ ucfirst($text) }}
                         </x-link>
                         @endforeach
                     </dd>

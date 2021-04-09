@@ -2,13 +2,21 @@
 
 namespace App\Models;
 
-use App\Twitter\Tweet;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Collection;
 use Orbit\Concerns\Orbital;
 
+/**
+ * @property string $slug
+ * @property string $title
+ * @property string|null $tweet_id
+ * @property string $author_username
+ * @property string $content
+ * @property array $links
+ */
 class Thread extends Model
 {
     use Orbital;
@@ -58,5 +66,10 @@ class Thread extends Model
     public function getIncrementing()
     {
         return false;
+    }
+
+    public function links(): Collection
+    {
+        return collect($this->links)->map(fn (array $link, string $key) => route('thread.link', ['thread' => $this, 'link' => $key]));
     }
 }

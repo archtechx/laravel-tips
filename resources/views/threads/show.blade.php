@@ -24,7 +24,7 @@
 
         <section class="py-12 bg-white md:py-24">
             <x:container>
-                <x:author-card :tip="$thread" :links="$thread->links" />
+                <x:author-card :tip="$thread" :links="$thread->links()" />
             </x:container>
         </section>
     </main>
