@@ -20,6 +20,10 @@ Route::middleware('static')->group(function () {
         return view('tips.index', ['tips' => Tip::all()]);
     })->name('tip.index');
 
+    Route::get('/threads/{thread}/{link}', function (Thread $thread, string $link) {
+        return redirect($thread->links[$link]['url']);
+    })->name('thread.show');
+
     Route::get('/threads/{thread}', function (Thread $thread) {
         return view('threads.show', [
             'thread' => $thread,

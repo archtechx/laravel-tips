@@ -4,12 +4,14 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\Response;
 use Illuminate\Routing\RedirectController;
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
 use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class GenerateHtml extends Command
 {
@@ -44,30 +46,44 @@ class GenerateHtml extends Command
             ->values()
             ->each(function (Route $route) use ($outdir) {
                 if (! count($route->parameterNames())) {
-                    if ($route->getActionName() === '\\' . RedirectController::class) {
-                        // $action = $this->router->match('get', $route->defaults['destination'])->getAction();
-                        // Redirects don't work yet
-                        $action = $route->getAction();
-                    } else {
-                        $action = $route->getAction();
-                    }
-
                     if (! is_dir($path = $outdir . '/' . $route->uri())) {
                         mkdir($path, 0777, true);
                     }
 
-                    File::put($outdir . '/' . $route->uri() . '/index.html', $this->render($action['uses']()));
+                    File::put($outdir . '/' . $route->uri() . '/index.html', $this->render($route->getAction()['uses']()));
                 } else {
-                    $model = 'App\\Models\\' . ucfirst($parameter = $route->parameterNames()[0]);
+                    $model = 'App\\Models\\' . ucfirst($firstParameter = $route->parameterNames()[0]);
 
-                    $root = (string) Str::of($outdir . '/' . $route->uri())->before("{{$parameter}}");
+                    $root = (string) Str::of($outdir . '/' . $route->uri())->before("{{$firstParameter}}");
 
                     foreach ($model::cursor() as $instance) {
                         if (! is_dir($path = $root . $instance->getRouteKey())) {
                             mkdir($path, 0777, true);
                         }
 
-                        File::put($path . '/index.html', $this->render($route->getAction()['uses']($instance)));
+                        if (count($route->parameterNames()) === 1) {
+                            File::put($path . '/index.html', $this->render($route->getAction()['uses']($instance)));
+                        } else { // 2 parameters
+                            $datasets = [];
+
+                            foreach ($route->parameterNames() as $parameter) {
+                                if ($parameter === $firstParameter) {
+                                    continue;
+                                }
+
+                                foreach ($instance->{Str::plural($parameter)} as $key => $value) {
+                                    $datasets[$key] = [$instance, $key];
+                                }
+                            }
+
+                            foreach ($datasets as $key => $data) {
+                                if (! is_dir($path = $path . '/' . $key)) {
+                                    mkdir($path, 0777, true);
+                                }
+
+                                File::put($path . '/index.html', $this->render($route->getAction()['uses'](...$data)));
+                            }
+                        }
                     }
                 }
             });
@@ -76,7 +92,13 @@ class GenerateHtml extends Command
     }
 
     protected function render ($response) {
+        if ($response instanceof RedirectResponse) {
+            // Redirect responses shouldn't be rendered with headers
+            return $response->getContent();
+        }
+
         if ($response instanceof Renderable) {
+            // Views should be rendered using render()
             return $response->render();
         }
 

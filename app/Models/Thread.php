@@ -15,6 +15,10 @@ class Thread extends Model
 
     public $timestamps = false;
 
+    public $casts = [
+        'links' => 'array',
+    ];
+
     public static function schema(Blueprint $table)
     {
         $table->string('slug')->unique();
@@ -22,6 +26,7 @@ class Thread extends Model
         $table->string('tweet_id')->nullable();
         $table->foreignId('author_username')->constrained('authors', 'username');
         $table->text('content');
+        $table->json('links')->default('{}');
         $table->timestamp('created_at');
     }
 

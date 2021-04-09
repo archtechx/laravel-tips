@@ -1,4 +1,7 @@
-@props(['tip'])
+@props([
+    'tip',
+    'links' => [],
+])
 
 <div class="flex w-full p-6 space-x-6 bg-gray-50 rounded-2xl">
     <a href="{{ $tip->author->profile_url }}" target="_blank">
@@ -23,15 +26,30 @@
                 </div>
             @endif
 
-            <div>
-                <dt class="text-sm text-gray-500">Tweet</dt>
+            @if($tip->tweet_id)
+                <div>
+                    <dt class="text-sm text-gray-500">Tweet</dt>
+                    <dd>
+                        <x-link href="{{ $tip->tweet_url }}" target="_blank">
+                            twitter.com/...
+                        </x-link>
+                    </dd>
+                </div>
+            @endif
 
-                <dd>
-                    <x-link href="{{ $tip->tweet_url }}" target="_blank">
-                        twitter.com/...
-                    </x-link>
-                </dd>
-            </div>
+            @if($links)
+                <div>
+                    <dt class="text-sm text-gray-500">Links</dt>
+
+                    <dd>
+                        @foreach($links as $link)
+                        <x-link href="{{ $link['url'] }}" target="_blank">
+                            {{ ucfirst($link['name']) }}
+                        </x-link>
+                        @endforeach
+                    </dd>
+                </div>
+            @endif
         </dl>
     </aside>
 </div>
