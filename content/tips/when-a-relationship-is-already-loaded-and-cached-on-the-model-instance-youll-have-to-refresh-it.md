@@ -9,6 +9,6 @@ created_at: 2020-09-21T16:42:13+00:00
 slug: when-a-relationship-is-already-loaded-and-cached-on-the-model-instance-youll-have-to-refresh-it
 ---
 
-`$domain-&gt;refresh();` to refresh its attributes
+`$domain->refresh();` to refresh its attributes
 
-`$tenant-&gt;load('primary_domain');` to update the `primary_domain` relationship on the $tenant instance
+`$tenant->load('primary_domain');` to update the `primary_domain` relationship on the $tenant instance
