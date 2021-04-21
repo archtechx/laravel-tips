@@ -1,5 +1,6 @@
 ---
 title: 'Livewire Disable Poll When Hidden'
+title: 'Disable Livewire polling when an element is hidden'
 tweet_id: '1383079668358725636'
 thread_slug: ''
 author_username: abrardev99
