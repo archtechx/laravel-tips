@@ -58,10 +58,15 @@ $title = $title
                 Want to share a tip? Submit it
                 <x-link href="https://github.com/stancl/laravel-tips">here</x-link>
             </li>
+            
+            <li>
+                Made with <span class="text-red-500">❤️</span> by
+                <x-link target="_blank" href="https://archte.ch">ArchTech</x-link>
+            </li>
 
             <li>
-                Designed with <span class="text-red-500">❤️</span> by
-                <x-link target="_blank" href="http://twitter.com/LarsKlopstra">Lars Klopstra</x-link>
+                Designed by
+                <x-link target="_blank" href="https://twitter.com/LarsKlopstra">Lars Klopstra</x-link>
             </li>
         </ul>
     </footer>
