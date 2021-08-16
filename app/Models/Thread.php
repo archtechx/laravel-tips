@@ -55,7 +55,11 @@ class Thread extends Model
 
     public function getTweetUrlAttribute(): string
     {
-        return "https://twitter.com/{$this->author_username}/status/{$this->tweet_id}";
+        if (is_numeric($this->tweet_id)) {
+            return "https://twitter.com/{$this->author_username}/status/{$this->tweet_id}";
+        }
+        
+        return $this->tweet_id;
     }
 
     public function getKeyName()
