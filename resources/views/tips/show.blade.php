@@ -60,7 +60,7 @@
                 @if ($tip->images())
                     @foreach ($tip->images() as $image)
                         <img class="shadow-xl rounded-xl backdrop-filter backdrop-blur-lg backdrop-saturate-125"
-                            src="{{ $image->small() }}" alt="{{ $tip->title }}">
+                            src="{{ $image->large() }}" alt="{{ $tip->title }}">
                     @endforeach
                 @endif
 

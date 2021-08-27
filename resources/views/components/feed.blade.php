@@ -29,7 +29,7 @@
 
                     @if ($tip->images())
                         @foreach ($tip->images() as $image)
-                            <img class="shadow-xl rounded-xl" src="{{ $image->small() }}" alt="{{ $tip->title }}">
+                            <img class="shadow-xl rounded-xl" src="{{ $image->medium() }}" alt="{{ $tip->title }}">
                         @endforeach
                     @endif
 

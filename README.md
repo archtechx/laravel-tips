@@ -32,7 +32,13 @@ ALWAYS use strict comparison (=== and !==). If needed, cast things go the correc
 Also consider enabling strict types in your code. This will prevent passing variables of wrong data types to functions
 ```
 
-The `slug` matches the file name, the `author_username` is the Twitter handle of the tip author, `tweet_id` is the id of the tweet with the tip, and `images` is an array of images that should be shown between the heading and the content.
+The `slug` matches the file name, the `author_username` is the Twitter handle of the tip author, `tweet_id` is the id of the tweet with the tip, and `images` is an array of images that should be shown between the heading and the content.'
+
+**Make sure you also create a record in `content/users` for your Twitter handle** if your Author is not created yet. The tip's `author_username` needs to reference an Author model.
+
+### Helper command
+
+You can also use the `php artisan tweet:add` command to add content, just make sure that the tweet's "dependencies" (author and possibly thread) are in place.
 
 ## Local setup
 

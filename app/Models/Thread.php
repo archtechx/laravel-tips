@@ -32,7 +32,7 @@ class Thread extends Model
         $table->string('slug')->unique();
         $table->string('title');
         $table->string('tweet_id')->nullable();
-        $table->foreignId('author_username')->constrained('authors', 'username');
+        $table->foreignId('author_username')->nullable()->constrained('authors', 'username');
         $table->text('content');
         $table->json('links')->default('{}');
         $table->timestamp('created_at');
@@ -58,7 +58,7 @@ class Thread extends Model
         if (is_numeric($this->tweet_id)) {
             return "https://twitter.com/{$this->author_username}/status/{$this->tweet_id}";
         }
-        
+
         return $this->tweet_id;
     }
 

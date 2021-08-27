@@ -19,7 +19,7 @@ use Illuminate\Support\Str;
  * @property string $content
  * @property string $tweet_id
  * @property string $author_username
- * @property string|null $thread_id
+ * @property string|null $thread_slug
  * @property string[] $images
  * @property-read Author $author
  * @property-read Thread|null $thread
@@ -41,7 +41,7 @@ class Tip extends Model
         $table->string('slug')->unique();
         $table->string('title');
         $table->string('tweet_id');
-        $table->foreignId('thread_slug')->constrained('threads', 'slug')->nullable();
+        $table->foreignId('thread_slug')->nullable();
         $table->foreignId('author_username')->constrained('authors', 'username');
         $table->json('images')->default('[]');
         $table->timestamp('created_at');
@@ -74,7 +74,7 @@ class Tip extends Model
             'title' => (string) Str::of(Str::of($tweet->text)->explode("\n")->first())->rtrim('.')->replaceMatches('/^([^a-zA-Z]*)/', ''), // remove any non-ascii characters from the beginning
             'content' => (string) Str::of($tweet->text)->explode("\n")->skip(1)->join("\n"),
             'tweet_id' => $tweet->id,
-            'thread_slug' => $threadSlug ?? Thread::firstWhere('tweet_id', $tweet->threadId)->slug,
+            'thread_slug' => $threadSlug ?? Thread::firstWhere('tweet_id', $tweet->threadId)?->slug,
             'author_username' => Author::firstOrCreate([
                 'username' => $tweet->author->username,
                 'name' => $tweet->author->name,
@@ -89,7 +89,7 @@ class Tip extends Model
     {
         static::creating(function (self $model) {
             $model->created_at ??= now();
-            $model->slug ??= Str::slug($model->title);
+            $model->slug ??= $this->defaultSlug();
         });
 
         static::addGlobalScope('order', fn (Builder $query) => $query->orderBy('created_at', 'desc'));
@@ -103,5 +103,10 @@ class Tip extends Model
     public function getIncrementing()
     {
         return false;
+    }
+
+    public function defaultSlug(): string
+    {
+        return Str::slug($this->title);
     }
 }
