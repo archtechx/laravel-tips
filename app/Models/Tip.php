@@ -74,7 +74,7 @@ class Tip extends Model
             'title' => (string) Str::of(Str::of($tweet->text)->explode("\n")->first())->rtrim('.')->replaceMatches('/^([^a-zA-Z]*)/', ''), // remove any non-ascii characters from the beginning
             'content' => (string) Str::of($tweet->text)->explode("\n")->skip(1)->join("\n"),
             'tweet_id' => $tweet->id,
-            'thread_slug' => $threadSlug ?? Thread::firstWhere('tweet_id', $tweet->threadId)?->slug,
+            'thread_slug' => $threadSlug ?? optional(Thread::firstWhere('tweet_id', $tweet->threadId))->slug,
             'author_username' => Author::firstOrCreate([
                 'username' => $tweet->author->username,
                 'name' => $tweet->author->name,
