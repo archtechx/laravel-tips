@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
 
-        view()->share('telegram', 'https://t.me/LaravelCodeTips');
+        view()->share('telegram', 'https://t.me/archtechx');
         view()->share('newsletter', 'https://newsletter.laravel-code.tips');
         view()->share('twitter', 'https://twitter.com/LaravelCodeTips');
     }
