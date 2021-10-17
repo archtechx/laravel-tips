@@ -41,7 +41,7 @@ class Tip extends Model
         $table->string('slug')->unique();
         $table->string('title');
         $table->string('tweet_id');
-        $table->foreignId('thread_slug')->nullable();
+        $table->string('thread_slug')->nullable();
         $table->foreignId('author_username')->constrained('authors', 'username');
         $table->json('images')->default('[]');
         $table->timestamp('created_at');
@@ -87,9 +87,9 @@ class Tip extends Model
 
     public static function booted()
     {
-        static::creating(function (self $model) {
+        static::creating(static function (self $model) {
             $model->created_at ??= now();
-            $model->slug ??= $this->defaultSlug();
+            $model->slug ??= $model->defaultSlug();
         });
 
         static::addGlobalScope('order', fn (Builder $query) => $query->orderBy('created_at', 'desc'));

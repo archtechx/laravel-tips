@@ -40,12 +40,15 @@ class Thread extends Model
 
     public static function booted()
     {
-        static::creating(fn (self $model) => $model->created_at ??= now());
+        static::creating(static function (self $model) {
+            $model->created_at ??= now();
+            $model->links ??= [];
+        });
     }
 
     public function tips(): HasMany
     {
-        return $this->hasMany(Tip::class);
+        return $this->hasMany(Tip::class, 'thread_slug');
     }
 
     public function author(): BelongsTo
