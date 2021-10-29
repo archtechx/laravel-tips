@@ -6,7 +6,7 @@ author_username: enunomaduro
 images:
     - 'https://pbs.twimg.com/media/FCtnhAvXEAco-Kc.jpg'
 created_at: 2021-10-29T17:11:33+00:00
-slug: use-arrow-not-to-reverse-an-assertion-in-at-pestphp
+slug: use-not-to-reverse-an-assertion-in-at-pestphp
 ---
 Pest reminder: if you know how to test something, "not()" lets you test its opposite. ✅
 
