@@ -46,7 +46,7 @@
             "@php artisan key:generate --ansi"
         ],
         "seed": "(rm -f content/**/*.md || true) && php artisan orbit:clear && php artisan db:seed",
-        "generate": "@php artisan html:generate static http://127.0.0.1:7777",
+        "generate": "php artisan orbit:clear && php artisan html:generate static http://127.0.0.1:7777",
         "serve": "@php -S 127.0.0.1:7777 -t static"
     },
     "extra": {
