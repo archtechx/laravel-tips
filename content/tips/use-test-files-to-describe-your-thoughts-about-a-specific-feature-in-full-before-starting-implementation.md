@@ -1,7 +1,7 @@
 ---
 title: 'Use test files to describe your thoughts about a specific feature — in full — before starting implementation'
 tweet_id: '1451526388717133857'
-thread_slug: weekly-thread-2021-44
+thread_slug: weekly-thread-2021-42
 author_username: laracasts
 images:
     - 'https://pbs.twimg.com/media/FCJX2LhXsAQZdJF.jpg'

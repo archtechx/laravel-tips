@@ -17,7 +17,7 @@ class WeeklyThread extends Command
     public function handle()
     {
         // 41
-        $week = $this->argument('week') ?? now()->week;
+        $week = $this->argument('week') ?? date('W');
 
         // https://twitter.com/archtechx/status/1448992205138444334?s=20
         $url = $this->argument('url');
