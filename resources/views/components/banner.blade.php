@@ -21,7 +21,7 @@
                     </p>
                 </div>
                 <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-                    <a href="https://airtable.com/shr7ymH15hGamMlcY"  class="w-full inline-flex space-x-2 justify-center py-2 px-4 rounded-md shadow-sm bg-white text-sm font-medium hover:bg-gray-50">
+                    <a href="https://airtable.com/shr7ymH15hGamMlcY" target="_blank" class="w-full inline-flex space-x-2 justify-center py-2 px-4 rounded-md shadow-sm bg-white text-sm font-medium hover:bg-gray-50">
                         <span class="font-medium ">
                             Join the waiting list
                         </span>
