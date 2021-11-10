@@ -52,13 +52,14 @@ $title = $title
 <body class="flex flex-col min-h-screen font-sans antialiased text-gray-800">
     {{ $slot }}
 
+
     <footer class="py-12 border-t">
         <ul class="px-4 space-y-4 text-center text-gray-500">
             <li>
                 Want to share a tip? Submit it
                 <x-link href="https://github.com/stancl/laravel-tips">here</x-link>
             </li>
-            
+
             <li>
                 Made with <span class="text-red-500">❤️</span> by
                 <x-link target="_blank" href="https://archte.ch">ArchTech</x-link>
@@ -70,6 +71,10 @@ $title = $title
             </li>
         </ul>
     </footer>
+
+    {{-- banner --}}
+    <x-banner />
+
 </body>
 
 </html>
