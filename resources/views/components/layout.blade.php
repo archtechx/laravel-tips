@@ -47,6 +47,10 @@ $title = $title
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <meta name="theme-color" content="#fa7c4c">
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 
 <body class="flex flex-col min-h-screen font-sans antialiased text-gray-800">

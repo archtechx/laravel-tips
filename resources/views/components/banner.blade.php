@@ -12,17 +12,17 @@
                         </svg>
                     </span>
                     <p class="ml-3 font-medium  truncate">
-                        <span class="md:hidden">
+                        <span class="md:hidden text-brown-900">
                             We're writing a book, you can get it <span class="font-bold underline">for free</span> here.
                         </span>
-                        <span class="hidden md:inline">
+                        <span class="hidden md:inline text-brown-900">
                             We're writing a book! Join the <span class="font-bold underline">early access</span> to get it for free.
                         </span>
                     </p>
                 </div>
                 <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
                     <a href="https://airtable.com/shr7ymH15hGamMlcY"  class="w-full inline-flex space-x-2 justify-center py-2 px-4 rounded-md shadow-sm bg-white text-sm font-medium hover:bg-gray-50">
-                        <span class="font-medium ">
+                        <span class="font-medium text-brown-900">
                             Join the waiting list
                         </span>
                     </a>
