@@ -21,13 +21,12 @@
                     </p>
                 </div>
                 <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-                    <a href="https://airtable.com/shr7ymH15hGamMlcY"  class="w-full inline-flex space-x-2 justify-center py-2 px-4 rounded-md shadow-sm bg-white text-sm font-medium hover:bg-gray-50">
+                    <a href="https://airtable.com/shr7ymH15hGamMlcY" target="_blank" class="w-full inline-flex space-x-2 justify-center py-2 px-4 rounded-md shadow-sm bg-white text-sm font-medium hover:bg-gray-50">
                         <span class="font-medium text-brown-900">
                             Join the waiting list
                         </span>
                     </a>
                 </div>
-
                 <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
                     <button @click="hide()" type="button" class="-mr-1 flex p-2 rounded-md hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 transition ease-in-out duration-150" aria-label="Dismiss">
                         <!-- Heroicon name: x -->
