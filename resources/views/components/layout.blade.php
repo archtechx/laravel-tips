@@ -47,6 +47,10 @@ $title = $title
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <meta name="theme-color" content="#fa7c4c">
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 
 <body class="flex flex-col min-h-screen font-sans antialiased text-gray-800">
@@ -58,7 +62,7 @@ $title = $title
                 Want to share a tip? Submit it
                 <x-link href="https://github.com/stancl/laravel-tips">here</x-link>
             </li>
-            
+
             <li>
                 Made with <span class="text-red-500">❤️</span> by
                 <x-link target="_blank" href="https://archte.ch">ArchTech</x-link>
@@ -70,6 +74,9 @@ $title = $title
             </li>
         </ul>
     </footer>
+
+    <x-banner />
+
 </body>
 
 </html>
