@@ -52,7 +52,6 @@ $title = $title
 <body class="flex flex-col min-h-screen font-sans antialiased text-gray-800">
     {{ $slot }}
 
-
     <footer class="py-12 border-t">
         <ul class="px-4 space-y-4 text-center text-gray-500">
             <li>
@@ -72,7 +71,6 @@ $title = $title
         </ul>
     </footer>
 
-    {{-- banner --}}
     <x-banner />
 
 </body>
