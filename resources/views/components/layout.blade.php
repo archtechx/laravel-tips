@@ -51,6 +51,8 @@ $title = $title
     <style>
         [x-cloak] { display: none !important; }
     </style>
+    
+    <script async src="https://hive.laravel-code.tips/sb.js"></script>
 </head>
 
 <body class="flex flex-col min-h-screen font-sans antialiased text-gray-800">
