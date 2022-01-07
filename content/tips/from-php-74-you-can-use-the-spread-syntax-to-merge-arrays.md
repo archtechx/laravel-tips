@@ -1,7 +1,7 @@
 ---
 title: 'From PHP 7.4, you can use the spread syntax to merge arrays'
 tweet_id: '1479467945822588931'
-thread_slug: weekly-thread-2021-01
+thread_slug: weekly-thread-2022-01
 author_username: bhaidar
 images:
     - 'https://pbs.twimg.com/media/FIDdCQvVEAMsK3l.jpg'

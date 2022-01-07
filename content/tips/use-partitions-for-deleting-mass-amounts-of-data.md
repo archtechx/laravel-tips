@@ -1,7 +1,7 @@
 ---
 title: 'Use partitions for deleting mass amounts of data'
 tweet_id: '1479467943276670979'
-thread_slug: weekly-thread-2021-01
+thread_slug: weekly-thread-2022-01
 author_username: tobias_petry
 images:
     - 'https://pbs.twimg.com/media/FIQQcQSXwAk2rDy.jpg'

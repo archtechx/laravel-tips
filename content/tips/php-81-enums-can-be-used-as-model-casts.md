@@ -1,7 +1,7 @@
 ---
 title: 'PHP 8.1 enums can be used as model casts'
 tweet_id: '1479467948985126913'
-thread_slug: weekly-thread-2021-01
+thread_slug: weekly-thread-2022-01
 author_username: ryangjchandler
 images:
     - 'https://pbs.twimg.com/media/FIRla1cX0AUpxGS.jpg'
