@@ -25,7 +25,7 @@ class WeeklyThread extends Command
         // 1448992205138444334
         $id = $this->extractID($url);
 
-        $slug = 'weekly-thread-2021-' . $week;
+        $slug = 'weekly-thread-2022-' . $week;
 
         Tip::where('thread_slug', $slug)->delete();
         Thread::where('slug', $slug)->delete();
@@ -35,7 +35,7 @@ class WeeklyThread extends Command
         /** @var Thread $thread */
         $thread = Thread::create([
             'slug' => $slug,
-            'title' => "Weekly thread #{$week} of 2021",
+            'title' => "Weekly thread #{$week} of 2022",
             'tweet_id' => $id,
             'author_username' => 'archtechx',
             'content' => $tweet->text,
