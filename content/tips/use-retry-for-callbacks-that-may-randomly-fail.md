@@ -1,7 +1,7 @@
 ---
 title: 'Use retry() for callbacks that may randomly fail'
 tweet_id: '1471864638199451648'
-thread_slug: weekly-thread-2021-01
+thread_slug: weekly-thread-2021-50
 author_username: alexjgarrett
 images:
     - 'https://pbs.twimg.com/media/FGP3MSQWQAYKjSm.jpg'

@@ -1,7 +1,7 @@
 ---
 title: 'You can refactor cluttered if () conditions using lookup tables, match statements, and switch statements'
 tweet_id: '1471864664661311488'
-thread_slug: weekly-thread-2021-01
+thread_slug: weekly-thread-2021-50
 author_username: archtechx
 images:
     - 'https://pbs.twimg.com/media/FGVrAKdVgAIWfwk.jpg'
