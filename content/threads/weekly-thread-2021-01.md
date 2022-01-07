@@ -1,6 +1,6 @@
 ---
 slug: weekly-thread-2021-01
-title: 'Weekly thread #01 of 2021'
+title: 'Weekly thread #01 of 2022'
 tweet_id: '1479467928818892800'
 author_username: archtechx
 created_at: 2022-01-07T16:35:34+00:00
