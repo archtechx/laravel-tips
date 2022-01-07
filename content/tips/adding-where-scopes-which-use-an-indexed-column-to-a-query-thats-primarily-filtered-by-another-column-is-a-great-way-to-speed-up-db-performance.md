@@ -1,7 +1,7 @@
 ---
 title: 'Adding WHERE scopes which use an indexed column to a query that''s primarily filtered by another column is a great way to speed up DB performance'
 tweet_id: '1471864653491974151'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: tobias_petry
 images:
     - 'https://pbs.twimg.com/media/FGafd_JXMAEDgP5.jpg'

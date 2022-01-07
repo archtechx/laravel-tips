@@ -1,7 +1,7 @@
 ---
 title: 'Use skip() when writing tests ahead of time'
 tweet_id: '1479467933705195521'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: bhaidar
 images:
     - 'https://pbs.twimg.com/media/FHNHgg4VgAAFSzE.jpg'

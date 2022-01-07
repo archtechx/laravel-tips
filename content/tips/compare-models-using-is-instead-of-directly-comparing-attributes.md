@@ -1,7 +1,7 @@
 ---
 title: 'Compare models using is() instead of directly comparing attributes'
 tweet_id: '1479467936700010504'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: archtechx
 images:
     - 'https://pbs.twimg.com/media/FHJNmt3VEAIYtCy.jpg'

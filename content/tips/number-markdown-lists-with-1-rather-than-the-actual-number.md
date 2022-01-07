@@ -1,7 +1,7 @@
 ---
 title: 'Number markdown lists with `1.` rather than the actual number'
 tweet_id: '1479467929888440329'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: frankdejonge
 images:
     - 'https://pbs.twimg.com/media/FHNHLM8X0AA6sqs.png'

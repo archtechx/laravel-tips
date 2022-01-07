@@ -1,7 +1,7 @@
 ---
 title: 'You can supply default values for route parameters'
 tweet_id: '1479467942039285762'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: ryangjchandler
 images:
     - 'https://pbs.twimg.com/media/FIWa8DxXMAIW7Tz.jpg'

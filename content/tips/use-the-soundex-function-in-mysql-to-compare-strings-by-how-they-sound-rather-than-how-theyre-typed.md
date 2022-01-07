@@ -1,7 +1,7 @@
 ---
 title: 'Use the `SOUNDEX()` function in MySQL to compare strings by how they *sound* rather than how they''re typed'
 tweet_id: '1479467947634556930'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: justsanjit
 images:
     - 'https://pbs.twimg.com/media/FHuueNxWUAMLdAP.jpg'

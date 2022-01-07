@@ -1,7 +1,7 @@
 ---
 title: 'You can use first class callables for routes in PHP 8.1'
 tweet_id: '1479467932379799552'
-thread_slug: weekly-thread-2022-01
+thread_slug: weekly-thread-2021-01
 author_username: archtechx
 images:
     - 'https://pbs.twimg.com/media/FHNP2kIVUAIqiCH.jpg'
