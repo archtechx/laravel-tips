@@ -1,7 +1,7 @@
 ---
 title: 'You can use the array spread syntax to pass an array of arguments to another function'
 tweet_id: '1471864644562305025'
-thread_slug: weekly-thread-2021-01
+thread_slug: weekly-thread-2021-50
 author_username: freekmurze
 images:
     - 'https://pbs.twimg.com/media/FGepj8mWQAUf2R_.jpg'
