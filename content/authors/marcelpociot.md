@@ -1,5 +1,5 @@
 ---
 username: marcelpociot
 name: 'Marcel Pociot 🧪'
-avatar: 'https://pbs.twimg.com/profile_images/1432253549984075778/JNGTD6wb_normal.jpg'
+avatar: 'https://pbs.twimg.com/profile_images/1467572011392245769/VDwu7_7w_normal.jpg'
 ---
