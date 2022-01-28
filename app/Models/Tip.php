@@ -75,7 +75,7 @@ class Tip extends Model
             'content' => (string) Str::of($tweet->text)->explode("\n")->skip(1)->join("\n"),
             'tweet_id' => $tweet->id,
             'thread_slug' => $threadSlug ?? optional(Thread::firstWhere('tweet_id', $tweet->threadId))->slug,
-            'author_username' => Author::firstOrCreate([
+            'author_username' => Author::updateOrCreate(['username' => $tweet->author->username], [
                 'username' => $tweet->author->username,
                 'name' => $tweet->author->name,
                 'avatar' => $tweet->author->profile_image_url,
