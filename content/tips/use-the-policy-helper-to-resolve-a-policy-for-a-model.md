@@ -1,7 +1,7 @@
 ---
 title: 'Use the policy() helper to resolve a policy for a model'
 tweet_id: '1494019545446567939'
-thread_slug: weekly-thread-2022-07
+thread_slug: weekly-thread-2022-06
 author_username: asantibanez
 images:
     - 'https://pbs.twimg.com/media/FLNAs-bXIAExJxr.jpg'

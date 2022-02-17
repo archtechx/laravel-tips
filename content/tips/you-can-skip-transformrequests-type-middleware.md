@@ -1,7 +1,7 @@
 ---
 title: 'You can skip() TransformRequests-type middleware'
 tweet_id: '1494019554304880641'
-thread_slug: weekly-thread-2022-07
+thread_slug: weekly-thread-2022-06
 author_username: pascalbaljet
 images:
     - 'https://pbs.twimg.com/media/FKwygqPWQAMRaTr.jpg'

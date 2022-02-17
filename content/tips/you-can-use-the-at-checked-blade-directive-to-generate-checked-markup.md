@@ -1,7 +1,7 @@
 ---
 title: 'You can use the @checked Blade directive to generate checked="" markup'
 tweet_id: '1494019560223096837'
-thread_slug: weekly-thread-2022-07
+thread_slug: weekly-thread-2022-06
 author_username: AshAllenDesign
 images:
     - 'https://pbs.twimg.com/media/FKwA95pWUAInwgf.jpg'

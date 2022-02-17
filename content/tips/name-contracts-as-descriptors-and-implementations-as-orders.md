@@ -1,7 +1,7 @@
 ---
 title: 'Name contracts as descriptors and implementations as orders'
 tweet_id: '1494019563490402305'
-thread_slug: weekly-thread-2022-07
+thread_slug: weekly-thread-2022-06
 author_username: MikeVILT
 images:
     - 'https://pbs.twimg.com/media/FLKZjZbXMAQ18WD.jpg'
