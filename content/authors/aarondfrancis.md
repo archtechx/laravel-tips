@@ -1,5 +1,5 @@
 ---
 username: aarondfrancis
+avatar: 'https://pbs.twimg.com/profile_images/1492165477161914369/bXZG72Li_normal.jpg'
 name: 'Aaron Francis'
-avatar: 'https://pbs.twimg.com/profile_images/1433075605784997889/-Smrc71W_normal.jpg'
 ---
