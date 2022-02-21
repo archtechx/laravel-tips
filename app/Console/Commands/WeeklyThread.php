@@ -39,6 +39,7 @@ class WeeklyThread extends Command
             'tweet_id' => $id,
             'author_username' => 'archtechx',
             'content' => $tweet->text,
+            'created_at' => $tweet->created_at,
         ]);
 
         while ($answer = $this->ask('Add tweet? Paste URL', 'no')) {
