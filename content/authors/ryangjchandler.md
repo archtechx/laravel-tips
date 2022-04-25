@@ -1,5 +1,5 @@
 ---
 username: ryangjchandler
+avatar: 'https://pbs.twimg.com/profile_images/1512466908746235904/6jQdQZim_normal.png'
 name: 'Ryan Chandler'
-avatar: 'https://pbs.twimg.com/profile_images/1446231529986961410/X5zL_n0h_normal.jpg'
 ---
