@@ -1,5 +1,5 @@
 ---
 username: enunomaduro
-avatar: 'https://pbs.twimg.com/profile_images/1433501939648565257/hT4oXpfq_normal.jpg'
+avatar: 'https://pbs.twimg.com/profile_images/1514432896102109185/LMj2oeW8_normal.jpg'
 name: 'Nuno Maduro 🤌🏻'
 ---
