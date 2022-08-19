@@ -12,4 +12,4 @@ slug: rows-can-be-stored-in-an-already-sorted-way-instead-of-the-default-inserti
 
 In most applications, all rows are physically sorted in the database file by their insertion order. By sorting them instead optimally for your application a huge databases will still be amazingly fast.
 
-https://sqlfordevs.io/sorted-table-faster-range-scan
+https://sqlfordevs.com/sorted-table-faster-range-scan
