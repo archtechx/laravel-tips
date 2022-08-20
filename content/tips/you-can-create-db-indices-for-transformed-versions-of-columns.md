@@ -12,4 +12,4 @@ slug: you-can-create-db-indices-for-transformed-versions-of-columns
 
 Most developers are puzzled that indexes are not used for e.g. WHERE LOWER(email) = ?. But contrary to common belief, an index can be created for these cases! It's called a function-based index and is supported by MySQL and PostgreSQL.
 
-https://sqlfordevs.io/tips/function-based-index
+https://sqlfordevs.com/function-based-index

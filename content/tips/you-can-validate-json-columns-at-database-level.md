@@ -12,4 +12,4 @@ slug: you-can-validate-json-columns-at-database-level
 
 Extending a traditional database schema with NoSQL-like JSON columns can make the schema more understandable. But you should also ensure these JSON documents conform to an expected schema!
 
-https://sqlfordevs.io/json-schema-validation
+https://sqlfordevs.com/json-schema-validation

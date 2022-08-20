@@ -10,4 +10,4 @@ slug: you-can-use-recursive-queries-to-query-hierarchical-trees
 ---
 ⚡ Database Tip
 
-Recursive queries are a great solution to e.g. querying multiple levels in a tree with just one query. But you should use cycle detection otherwise your query might run forever or fail for loops in your data. https://sqlfordevs.io/cycle-detection-recursive-query
+Recursive queries are a great solution to e.g. querying multiple levels in a tree with just one query. But you should use cycle detection otherwise your query might run forever or fail for loops in your data. https://sqlfordevs.com/cycle-detection-recursive-query

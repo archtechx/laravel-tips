@@ -12,4 +12,4 @@ slug: databases-can-generate-random-uuid-keys
 
 Many applications use the table's numeric primary key in the URL: Bots can scrape all data by incrementing the ID and competitors know your number of customers/resources and growth.Adding a random UUID which is used in URLs solves this.
 
-https://sqlfordevs.io/uuid-prevent-enumeration-attack
+https://sqlfordevs.com/uuid-prevent-enumeration-attack
